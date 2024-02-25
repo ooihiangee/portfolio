@@ -9,7 +9,7 @@
 
 I was able to scrape the hero wallpapers from the official website using Python.
 
-## [Project 2: A Statistical Analysis of Labour Force Participation Rate in Malaysia for the Last Four Decades]([https://github.com/ooihiangee/Data-Science-Projects/tree/main/1.%20Web%20Scraping%20for%20Game%20Hero%20Skin%20Wallpapers](https://github.com/ooihiangee/Data-Science-Projects/tree/main/A%20Statistical%20Analysis%20of%20LFPR%20in%20Malaysia%20for%20Last%20Four%20Decades))
+## [Project 2: A Statistical Analysis of Labour Force Participation Rate in Malaysia for the Last Four Decades]([https://github.com/ooihiangee/Data-Science-Projects/tree/main/1.%20Web%20Scraping%20for%20Game%20Hero%20Skin%20Wallpapers])
 
 ## **Power BI Works**
 ## [Entrepreneurial Competency Study](https://app.powerbi.com/groups/me/reports/1515d8b6-1efb-417a-ab6a-50bffe05a2ba/ReportSection?experience=power-bi)
