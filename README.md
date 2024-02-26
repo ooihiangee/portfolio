@@ -14,5 +14,5 @@ I was able to scrape the hero wallpapers from the official website using Python.
 # Hian Gee's Power BI Dashboards
 
 ## [Entrepreneurial Competency Study](https://app.powerbi.com/groups/me/reports/1515d8b6-1efb-417a-ab6a-50bffe05a2ba/ReportSection?experience=power-bi)
-![Entrepreneurial Competency Study Dashboard](https://raw.githubusercontent.com/ooihiangee/Data-Science-Projects/main/images/Entrepreneurial%20Competency%20Snapshot.png)
+![Entrepreneurial Competency Study Dashboard](https://raw.githubusercontent.com/ooihiangee/Data-Science-Projects/main/images/Entrepreneurial%20Competency.png)
 
