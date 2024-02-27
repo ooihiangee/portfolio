@@ -15,6 +15,7 @@ I was able to scrape the hero wallpapers from the official website using Python.
 
 ## [Project 4: Movie Recommendation System](https://github.com/ooihiangee/Data-Science-Projects/tree/main/Movie%20Recommendation%20System)
 ![Movie Recommendation System using R](https://raw.githubusercontent.com/ooihiangee/Data-Science-Projects/main/images/Movie%20Recommendation%20System.png)
+[https://sklfrx-ooi-hian0gee.shinyapps.io/Movie_Recommedation_System](https://sklfrx-ooi-hian0gee.shinyapps.io/Movie_Recommedation_System/)
 
 # Hian Gee's Power BI Dashboards
 
