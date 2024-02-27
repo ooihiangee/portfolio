@@ -11,9 +11,12 @@ I was able to scrape the hero wallpapers from the official website using Python.
 
 ## [Project 2: A Statistical Analysis of Labour Force Participation Rate in Malaysia for the Last Four Decades](https://github.com/ooihiangee/Data-Science-Projects/tree/main/1.%20Web%20Scraping%20for%20Game%20Hero%20Skin%20Wallpapers)
 
+## [Project 3: Econometric Modelling of MYR/USD Exchange Rates and Key Macroeconomic Data](https://github.com/ooihiangee/Data-Science-Projects/tree/main/1.%20Web%20Scraping%20for%20Game%20Hero%20Skin%20Wallpapers)
+
 # Hian Gee's Power BI Dashboards
 
 ## [Entrepreneurial Competency Study](https://app.powerbi.com/groups/me/reports/1515d8b6-1efb-417a-ab6a-50bffe05a2ba/ReportSection?experience=power-bi)
+The dataset consists of responses collected from the university students via entrepreneurial competency study survey. It collects respondents' demographics, existence of several personality traits such as resilience, competitiveness and etc weighted on a scale of 1 to 5, reasons behind lack of interest in entrepreneurship as well as whether the student is likely to become an entrepreneur or not.
 ![Entrepreneurial Competency Study Dashboard](https://raw.githubusercontent.com/ooihiangee/Data-Science-Projects/main/images/Entrepreneurial%20Competency.png)
 
 * The respondents' ages range from 17 to 26 years old and most of them are aged 20 at a count of 79. The number of males undertake number of females at all ages except 23 and 25. At age of 23, there is a male and a female respondent, while at age of 25, there is only 1 female respondent.
