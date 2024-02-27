@@ -13,6 +13,9 @@ I was able to scrape the hero wallpapers from the official website using Python.
 
 ## [Project 3: Econometric Modelling of MYR/USD Exchange Rates and Key Macroeconomic Data](https://github.com/ooihiangee/Data-Science-Projects/tree/main/1.%20Web%20Scraping%20for%20Game%20Hero%20Skin%20Wallpapers)
 
+## [Project 4: Movie Recommendation System](https://github.com/ooihiangee/Data-Science-Projects/tree/main/Movie%20Recommendation%20System)
+![Movie Recommendation System using R](https://raw.githubusercontent.com/ooihiangee/Data-Science-Projects/main/images/Movie%20Recommendation%20System.png)
+
 # Hian Gee's Power BI Dashboards
 
 ## [Entrepreneurial Competency Study](https://app.powerbi.com/groups/me/reports/1515d8b6-1efb-417a-ab6a-50bffe05a2ba/ReportSection?experience=power-bi)
