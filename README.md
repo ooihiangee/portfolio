@@ -12,7 +12,7 @@ The time series plot showed that LFPR hovered between 62% and 68% for the past 4
 Stability in a country’s currency exchange rates is extremely crucial as fluctuations in the exchange rates significantly impact the international trade, investment, debt, and a country's overall economic health. The exchanges rates are always linked to a variety of internal and external factors, among them are what we called as macroeconomic factors which include gross export values, Industrial Production Index (IPI) and so on. This research seeks to explore the underlying relationship between these macroeconomic variables and the currency exchange rate of Malaysian Ringgits (MYR) vs US Dollars (USD) by leveraging latest available data up to the year of 2023. The motivation behind this research lies in the recognition that a thorough understanding of the relationships between macroeconomic variables and currency exchange rates can be beneficial for informed policymaking and budgeting. In view of Malaysia as a developing country where its economy is evolving by leap and bounds at the present, a comprehensive analysis becomes necessary.
 
 
-## [Project 3: Movie Recommendation System](https://github.com/ooihiangee/Data-Science-Projects/tree/main/Movie%20Recommendation%20System)
+## [Project 3: Movies Recommendation System](https://github.com/ooihiangee/Data-Science-Projects/tree/main/Movie%20Recommendation%20System)
 ![Movie Recommendation System using R](https://raw.githubusercontent.com/ooihiangee/Data-Science-Projects/main/Movie%20Recommendation%20System/Movie%20Recommendation%20System.png)
 [https://sklfrx-ooi-hian0gee.shinyapps.io/Movie_Recommedation_System](https://sklfrx-ooi-hian0gee.shinyapps.io/Movie_Recommedation_System/)
 
