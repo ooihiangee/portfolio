@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Typed.js Initialization for the typing effect
     const typed = new Typed('.multiple-text', {
-        strings: ['Frontend Developer', 'YouTuber', 'Blogger'], // CHANGE THESE STRINGS
+        strings: ['Data Analyst', 'Scorecard Modeller', 'AI Enthusiast'],
         typeSpeed: 100, // Speed of typing
         backSpeed: 60, // Speed of backspacing
         backDelay: 1000, // Delay before backspacing
