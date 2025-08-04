@@ -167,24 +167,6 @@ span.multiple-text {
     align-items: center;
 }
 
-.home-img .img-container::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
-    width: 100%;
-    height: 100%;
-    background: transparent; /* Or a solid color if preferred */
-     border: .2rem solid var(--main-color); /* Border for the hexagon shape */
-    /* Hexagon shape using clip-path */
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    /* Glow effect */
-     box-shadow: 0 0 3rem var(--main-color); /* Adjust spread and blur */
-     z-index: -1; /* Place behind the image */
-}
-
-
 .home-img img {
     width: 90%; /* Make image slightly smaller than container */
     max-width: 400px; /* Max size */
