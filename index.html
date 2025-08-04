@@ -27,7 +27,7 @@
     <!-- Home Section -->
     <section class="home" id="home">
         <div class="home-content">
-            <h3>Hello, It's Me</h3>
+            <h3>Hello, It's Me!</h3>
             <h1>Hian Gee</h1>
             <h3>And I'm a <span class="multiple-text"></span></h3>
             <p>As a University of Malaya Applied Mathematics and Master of Data Science graduate, I'm deeply fascinated by how mathematical knowledge translates into real-world impact, particularly through the lens of data analysis – seeing how raw numbers can predict trends, monitor processes, or guide conclusions. I thrive on leveraging tools like Python and R to transform complex datasets into compelling visualizations and actionable insights, truly believing in the power of data storytelling for informed decision-making. My commitment extends beyond academics; I actively pursue continuous learning via workshops and online courses, honed leadership skills as Treasurer of the UM Mathematical Association, and enjoy staying active with badminton. Eager to embrace new challenges and step outside my comfort zone, I'm excited to apply my analytical skills and passion for data to drive meaningful outcomes.</p>
@@ -154,16 +154,22 @@
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me!</span></h2>
 
-        <form action="#"> <!-- Add your Formspree endpoint here if using -->
+        <!-- UPDATE THE ACTION AND ADD THE METHOD ATTRIBUTE -->
+        <form action="https://formspree.io/f/mvgqbeeq" method="POST">
+
             <div class="input-box">
-                <input type="text" placeholder="Full Name" required>
-                <input type="email" placeholder="Email Address" required>
+                <!-- ADD NAME ATTRIBUTES -->
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
             </div>
-             <div class="input-box">
-                <input type="tel" placeholder="Mobile Number">
-                <input type="text" placeholder="Email Subject">
+            <div class="input-box">
+                <input type="tel" name="mobile" placeholder="Mobile Number">
+                <input type="text" name="subject" placeholder="Email Subject">
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+
+            <!-- ADD A NAME ATTRIBUTE -->
+            <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+
             <input type="submit" value="Send Message" class="btn">
         </form>
     </section>
