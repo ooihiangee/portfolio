@@ -1,6 +1,7 @@
 import * as data from './data.js';
 
 const THEME_STORAGE_KEY = 'portfolio-theme';
+const ACCESS_CODE = 'portfolio2026';
 
 function applyTheme(theme) {
     document.body.classList.toggle('dark', theme === 'dark');
@@ -38,7 +39,43 @@ function initializeTheme() {
     });
 }
 
+function initializeAccessGate() {
+    const gate = document.getElementById('access-gate');
+    const content = document.getElementById('portfolio-content');
+    const form = document.getElementById('passcode-form');
+    const input = document.getElementById('passcode-input');
+    const message = document.getElementById('passcode-message');
+
+    if (!gate || !content || !form || !input || !message) return;
+
+    const storedAccess = sessionStorage.getItem('portfolio-access');
+    if (storedAccess === 'granted') {
+        gate.classList.add('hidden');
+        content.classList.remove('hidden');
+        return;
+    }
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const enteredCode = input.value.trim();
+
+        if (enteredCode === ACCESS_CODE) {
+            sessionStorage.setItem('portfolio-access', 'granted');
+            gate.classList.add('hidden');
+            content.classList.remove('hidden');
+            message.textContent = 'Access granted. Welcome!';
+            message.style.color = '#16a34a';
+        } else {
+            message.textContent = 'Incorrect passcode. Please try again.';
+            message.style.color = '#dc2626';
+            input.value = '';
+            input.focus();
+        }
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+    initializeAccessGate();
     initializeTheme();
     renderHero();
     renderSkills();

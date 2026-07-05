@@ -11,80 +11,95 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="bg-white text-slate-900 antialiased">
-    <nav class="top-nav">
-        <a href="#hero">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <button id="theme-toggle" type="button" class="theme-toggle" aria-pressed="false">
-        <i data-lucide="moon" class="w-5 h-5"></i>
-        <span class="ml-2 text-sm font-semibold">Dark Mode</span>
-    </button>
-
-    <!-- Hero Section -->
-    <header id="hero" class="py-24 px-6 max-w-6xl mx-auto">
-        <div id="hero-content"></div>
-    </header>
-
-    <!-- Portfolio Projects -->
-    <section class="bg-slate-50 py-24 px-6" id="projects">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-bold mb-12 flex items-center gap-3">
-                <span class="h-8 w-1 bg-blue-600 rounded-full"></span> Featured Projects
-            </h2>
-            <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+    <div id="access-gate" class="access-gate">
+        <div class="access-card">
+            <div class="access-icon"><i data-lucide="lock-keyhole"></i></div>
+            <h1>Private Portfolio Access</h1>
+            <p>Enter the passcode to unlock the full portfolio experience.</p>
+            <form id="passcode-form" class="passcode-form">
+                <input id="passcode-input" type="password" placeholder="Enter passcode" autocomplete="off" />
+                <button type="submit">Unlock</button>
+            </form>
+            <p id="passcode-message" class="passcode-message">Hint: contact the owner for the code.</p>
         </div>
-    </section>
+    </div>
 
-    <!-- Skills Section -->
-    <section class="bg-slate-50 py-24 px-6" id="skills">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-bold mb-12 flex items-center gap-3">
-                <span class="h-8 w-1 bg-blue-600 rounded-full"></span> Technical Skills
-            </h2>
-            <div id="skills-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-        </div>
-    </section>
+    <div id="portfolio-content" class="portfolio-content hidden">
+        <nav class="top-nav">
+            <a href="#hero">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </nav>
 
-    <!-- Experience Section -->
-    <section class="py-24 px-6 max-w-6xl mx-auto" id="experience">
-        <h2 class="text-3xl font-bold mb-12 flex items-center gap-3">
-            <span class="h-8 w-1 bg-blue-600 rounded-full"></span> Work Experience
-        </h2>
-        <div id="experience-timeline" class="relative border-l-2 border-slate-200 ml-3 md:ml-6 pl-8 space-y-12"></div>
-    </section>
+        <button id="theme-toggle" type="button" class="theme-toggle" aria-pressed="false">
+            <i data-lucide="moon" class="w-5 h-5"></i>
+            <span class="ml-2 text-sm font-semibold">Dark Mode</span>
+        </button>
 
-    <!-- Education & Certs -->
-    <section id="education" class="py-24 px-6 max-w-6xl mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
-            <div>
+        <!-- Hero Section -->
+        <header id="hero" class="py-24 px-6 max-w-6xl mx-auto">
+            <div id="hero-content"></div>
+        </header>
+
+        <!-- Portfolio Projects -->
+        <section class="bg-slate-50 py-24 px-6" id="projects">
+            <div class="max-w-6xl mx-auto">
                 <h2 class="text-3xl font-bold mb-12 flex items-center gap-3">
-                    <span class="h-8 w-1 bg-blue-600 rounded-full"></span> Education
+                    <span class="h-8 w-1 bg-blue-600 rounded-full"></span> Featured Projects
                 </h2>
-                <div id="education-list" class="space-y-8"></div>
+                <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             </div>
-            <div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="bg-slate-50 py-24 px-6" id="skills">
+            <div class="max-w-6xl mx-auto">
                 <h2 class="text-3xl font-bold mb-12 flex items-center gap-3">
-                    <span class="h-8 w-1 bg-blue-600 rounded-full"></span> Certifications
+                    <span class="h-8 w-1 bg-blue-600 rounded-full"></span> Technical Skills
                 </h2>
-                <div id="certifications-list" class="space-y-4"></div>
+                <div id="skills-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="bg-white py-24 px-6">
-        <div class="max-w-4xl mx-auto" id="contact-container"></div>
-    </section>
+        <!-- Experience Section -->
+        <section class="py-24 px-6 max-w-6xl mx-auto" id="experience">
+            <h2 class="text-3xl font-bold mb-12 flex items-center gap-3">
+                <span class="h-8 w-1 bg-blue-600 rounded-full"></span> Work Experience
+            </h2>
+            <div id="experience-timeline" class="relative border-l-2 border-slate-200 ml-3 md:ml-6 pl-8 space-y-12"></div>
+        </section>
 
-    <!-- Footer -->
-    <footer class="bg-slate-900 text-white py-16 px-6 text-center">
-        <div id="footer-content"></div>
-    </footer>
+        <!-- Education & Certs -->
+        <section id="education" class="py-24 px-6 max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+                <div>
+                    <h2 class="text-3xl font-bold mb-12 flex items-center gap-3">
+                        <span class="h-8 w-1 bg-blue-600 rounded-full"></span> Education
+                    </h2>
+                    <div id="education-list" class="space-y-8"></div>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold mb-12 flex items-center gap-3">
+                        <span class="h-8 w-1 bg-blue-600 rounded-full"></span> Certifications
+                    </h2>
+                    <div id="certifications-list" class="space-y-4"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-white py-24 px-6">
+            <div class="max-w-4xl mx-auto" id="contact-container"></div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-slate-900 text-white py-16 px-6 text-center">
+            <div id="footer-content"></div>
+        </footer>
+    </div>
 
     <script type="module" src="script.js"></script>
 </body>
