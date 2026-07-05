@@ -1,7 +1,7 @@
 import * as data from './data.js';
 
 const THEME_STORAGE_KEY = 'portfolio-theme';
-const ACCESS_CODE = 'portfolio2026';
+const ACCESS_CODE = '011-33403096';
 
 function applyTheme(theme) {
     document.body.classList.toggle('dark', theme === 'dark');
