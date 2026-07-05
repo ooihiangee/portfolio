@@ -1,5 +1,108 @@
+:root {
+    color-scheme: light;
+}
+
 html {
     scroll-behavior: smooth;
+}
+
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark {
+    background-color: #020617;
+    color: #e2e8f0;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 50;
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    border-radius: 9999px;
+    background-color: white;
+    color: #0f172a;
+    padding: 0.7rem 1rem;
+    box-shadow: 0 10px 25px -10px rgba(15, 23, 42, 0.2);
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: translateY(-1px);
+}
+
+body.dark .theme-toggle {
+    background-color: #0f172a;
+    color: #f8fafc;
+    border-color: rgba(148, 163, 184, 0.3);
+    box-shadow: 0 10px 25px -10px rgba(2, 6, 23, 0.6);
+}
+
+body.dark .bg-white {
+    background-color: #111827 !important;
+    color: #f8fafc !important;
+}
+
+body.dark section.bg-slate-50,
+body.dark .bg-slate-50 {
+    background-color: #111827 !important;
+}
+
+body.dark .bg-slate-100 {
+    background-color: #1f2937 !important;
+}
+
+body.dark .border-slate-100,
+body.dark .border-slate-200,
+body.dark .border-slate-300 {
+    border-color: #334155 !important;
+}
+
+body.dark .text-slate-900 {
+    color: #f8fafc !important;
+}
+
+body.dark .text-slate-800 {
+    color: #f1f5f9 !important;
+}
+
+body.dark .text-slate-700 {
+    color: #e2e8f0 !important;
+}
+
+body.dark .text-slate-600 {
+    color: #cbd5e1 !important;
+}
+
+body.dark .text-slate-500 {
+    color: #94a3b8 !important;
+}
+
+body.dark .text-slate-400 {
+    color: #64748b !important;
+}
+
+body.dark input,
+body.dark textarea {
+    background-color: #020617;
+    color: #f8fafc;
+    border-color: #334155;
+}
+
+body.dark .bg-blue-50 {
+    background-color: #1e3a8a !important;
+}
+
+body.dark .text-blue-600 {
+    color: #60a5fa !important;
+}
+
+body.dark .text-blue-700 {
+    color: #bfdbfe !important;
 }
 
 /* Vertical Timeline Circle Customization */

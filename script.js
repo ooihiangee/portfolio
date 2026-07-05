@@ -1,6 +1,45 @@
 import * as data from './data.js';
 
+const THEME_STORAGE_KEY = 'portfolio-theme';
+
+function applyTheme(theme) {
+    document.body.classList.toggle('dark', theme === 'dark');
+    document.body.setAttribute('data-theme', theme);
+
+    const toggleButton = document.getElementById('theme-toggle');
+    if (toggleButton) {
+        toggleButton.setAttribute('aria-pressed', String(theme === 'dark'));
+        const icon = toggleButton.querySelector('i');
+        const label = toggleButton.querySelector('span');
+
+        if (icon) {
+            icon.setAttribute('data-lucide', theme === 'dark' ? 'sun' : 'moon');
+        }
+
+        if (label) {
+            label.textContent = theme === 'dark' ? 'Light Mode' : 'Dark Mode';
+        }
+    }
+
+    lucide.createIcons();
+}
+
+function initializeTheme() {
+    const savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+    const preferredTheme = savedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+    applyTheme(preferredTheme);
+
+    const toggleButton = document.getElementById('theme-toggle');
+    toggleButton?.addEventListener('click', () => {
+        const nextTheme = document.body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        localStorage.setItem(THEME_STORAGE_KEY, nextTheme);
+        applyTheme(nextTheme);
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+    initializeTheme();
     renderHero();
     renderSkills();
     renderExperience();
