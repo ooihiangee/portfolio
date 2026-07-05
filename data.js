@@ -1,8 +1,9 @@
 export const bioData = {
-    name: "Alex Rivera",
-    title: "Senior Data Scientist",
-    summary: "Data Scientist with 5+ years of experience in building scalable machine learning pipelines and driving business growth through data-driven insights. Specialized in NLP and Predictive Analytics.",
-    email: "alex.rivera@email.com",
+    name: "Ooi Hian Gee",
+    title: "Scorecard Modeller | Data Scientist | Machine Learning Engineer",
+    summary: "Detail-oriented Credit Risk professional with strong foundations in statistics, machine learning and workflow automation. Experienced in developing and validating credit scoring models as well as translating complex data into actionable insights for risk strategy and governance. Proficient in SAS, SQL, Python and R with a proven ability to work across teams and lead data-driven initiatives",
+    email: "ooihiangee@gmail.com",
+    resume: "assets/VETECE.pdf",
     socials: {
         github: "https://github.com/",
         linkedin: "https://linkedin.com/",
@@ -70,5 +71,5 @@ export const certifications = [
 ];
 
 export const contactConfig = {
-    formspreeUrl: "https://formspree.io/f/mvgqbeeq" // Replace with your ID
+    formspreeUrl: "https://formspree.io/f/mvgqbeeq"
 };
