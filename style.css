@@ -18,27 +18,59 @@ body.dark {
 .top-nav {
     position: sticky;
     top: 0;
-    z-index: 40;
+    z-index: 50;
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    align-items: center;
+    gap: 0.75rem;
     padding: 1rem 1.5rem;
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+    margin: 0 auto 1.5rem;
+    max-width: 1180px;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(148, 163, 184, 0.22);
+    border-radius: 9999px;
+    box-shadow: 0 12px 35px -18px rgba(15, 23, 42, 0.35);
 }
 
 .top-nav a {
+    position: relative;
     color: #0f172a;
-    font-weight: 600;
-    padding: 0.5rem 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    padding: 0.7rem 1rem;
     border-radius: 9999px;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition: all 0.25s ease;
 }
 
-.top-nav a:hover {
-    background-color: #dbeafe;
-    color: #1d4ed8;
+.top-nav a:hover,
+.top-nav a:focus-visible {
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px -10px rgba(37, 99, 235, 0.6);
+}
+
+.top-nav a:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px -6px rgba(37, 99, 235, 0.5);
+}
+
+.top-nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0.25rem;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: all 0.25s ease;
+    transform: translateX(-50%);
+}
+
+.top-nav a:hover::after,
+.top-nav a:focus-visible::after {
+    width: 60%;
 }
 
 .theme-toggle {
@@ -62,17 +94,20 @@ body.dark {
 }
 
 body.dark .top-nav {
-    background: rgba(2, 6, 23, 0.85);
-    border-bottom-color: rgba(148, 163, 184, 0.2);
+    background: rgba(2, 6, 23, 0.9);
+    border-color: rgba(148, 163, 184, 0.24);
+    box-shadow: 0 12px 35px -18px rgba(2, 6, 23, 0.75);
 }
 
 body.dark .top-nav a {
     color: #e2e8f0;
 }
 
-body.dark .top-nav a:hover {
-    background-color: #1e3a8a;
-    color: #bfdbfe;
+body.dark .top-nav a:hover,
+body.dark .top-nav a:focus-visible {
+    background: linear-gradient(135deg, #3b82f6, #60a5fa);
+    color: #f8fafc;
+    box-shadow: 0 8px 20px -10px rgba(96, 165, 250, 0.55);
 }
 
 body.dark .theme-toggle {
@@ -142,6 +177,13 @@ body.dark .bg-blue-50 {
         flex-wrap: wrap;
         gap: 0.5rem;
         padding: 0.75rem 1rem;
+        border-radius: 1.25rem;
+        margin: 0.5rem 0.75rem 1rem;
+    }
+
+    .top-nav a {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.95rem;
     }
 
     .theme-toggle {
