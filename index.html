@@ -3,190 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hian Gee - Portfolio</title>
+    <title>Portfolio | Data Science</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome CDN (for icons) -->
-    <link rel="icon" type="image/png" href="images/skateboard.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body>
+<body class="bg-white text-slate-900 antialiased">
 
-    <!-- Header -->
-    <header class="header">
-        <a href="#" class="logo">Portfolio.</a> <!-- CHANGE THIS -->
-
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
-        </nav>
+    <!-- Hero Section -->
+    <header class="py-24 px-6 max-w-6xl mx-auto">
+        <div id="hero-content"></div>
     </header>
 
-    <!-- Home Section -->
-    <section class="home" id="home">
-        <div class="home-content">
-            <h3>Hello, It's Me!</h3>
-            <h1>Hian Gee</h1>
-            <h3>And I'm a <span class="multiple-text"></span></h3>
-            <p>As a University of Malaya Applied Mathematics and Master of Data Science graduate, I'm deeply fascinated by how mathematical knowledge translates into real-world impact, particularly through the lens of data analysis – seeing how raw numbers can predict trends, monitor processes, or guide conclusions. I thrive on leveraging tools like Python and R to transform complex datasets into compelling visualizations and actionable insights, truly believing in the power of data storytelling for informed decision-making. My commitment extends beyond academics; I actively pursue continuous learning via workshops and online courses, honed leadership skills as Treasurer of the UM Mathematical Association, and enjoy staying active with badminton. Eager to embrace new challenges and step outside my comfort zone, I'm excited to apply my analytical skills and passion for data to drive meaningful outcomes.</p>
-            <div class="social-media">
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-            </div>
-            <a href="assets/VETECE.pdf" class="btn" download>Download CV</a>
-        </div>
-
-        <div class="home-img">
-             <!-- You might need a container div around the image for the hexagon -->
-            <div class="img-container">
-                 <img src="images/profile.jpg" alt="Hian Gee"> 
-            </div>
+    <!-- Skills Section -->
+    <section class="bg-slate-50 py-24 px-6" id="skills">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 flex items-center gap-3">
+                <span class="h-8 w-1 bg-blue-600 rounded-full"></span> Technical Skills
+            </h2>
+            <div id="skills-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-         <div class="about-img">
-            <!-- Re-use the image or a different one if needed -->
-             <div class="img-container">
-                <img src="images/excel.png" alt="Hian Gee">
-             </div>
-        </div>
+    <!-- Experience Section -->
+    <section class="py-24 px-6 max-w-6xl mx-auto" id="experience">
+        <h2 class="text-3xl font-bold mb-12 flex items-center gap-3">
+            <span class="h-8 w-1 bg-blue-600 rounded-full"></span> Work Experience
+        </h2>
+        <div id="experience-timeline" class="relative border-l-2 border-slate-200 ml-3 md:ml-6 pl-8 space-y-12"></div>
+    </section>
 
-        <div class="about-content">
-            <h2 class="heading">About <span>Me</span></h2>
-            <h3>Frontend Developer!</h3> <!-- CHANGE THIS -->
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex delectus iste, aliquid officia quasi aliquam deleniti consequuntur suscipit ducimus tenetur maiores vel commodi veniam ratione! Nisi praesentium delectus fugiat officiis cupiditate in illum, modi unde recusandae, molestiae excepturi voluptatum temporibus.</p> <!-- CHANGE THIS -->
-            <a href="#" class="btn">Read More</a>
+    <!-- Portfolio Projects -->
+    <section class="bg-slate-50 py-24 px-6" id="projects">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 flex items-center gap-3">
+                <span class="h-8 w-1 bg-blue-600 rounded-full"></span> Featured Projects
+            </h2>
+            <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <h2 class="heading">Our <span>Services</span></h2>
-
-        <div class="services-container">
-            <div class="services-box">
-                <i class="fa-solid fa-code"></i>
-                <h3>Web Development</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam quia voluptas nostrum? Dolore culpa eius possimus fugit reprehenderit aperiam eveniet.</p>
-                <a href="#" class="btn">Read More</a>
+    <!-- Education & Certs -->
+    <section class="py-24 px-6 max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+            <div>
+                <h2 class="text-3xl font-bold mb-12 flex items-center gap-3">
+                    <span class="h-8 w-1 bg-blue-600 rounded-full"></span> Education
+                </h2>
+                <div id="education-list" class="space-y-8"></div>
             </div>
-
-            <div class="services-box">
-                <i class="fa-solid fa-pencil"></i> <!-- Changed icon -->
-                <h3>Graphic Design</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam quia voluptas nostrum? Dolore culpa eius possimus fugit reprehenderit aperiam eveniet.</p>
-                <a href="#" class="btn">Read More</a>
+            <div>
+                <h2 class="text-3xl font-bold mb-12 flex items-center gap-3">
+                    <span class="h-8 w-1 bg-blue-600 rounded-full"></span> Certifications
+                </h2>
+                <div id="certifications-list" class="space-y-4"></div>
             </div>
-
-            <div class="services-box">
-                <i class="fa-solid fa-chart-line"></i> <!-- Changed icon -->
-                <h3>Digital Marketing</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam quia voluptas nostrum? Dolore culpa eius possimus fugit reprehenderit aperiam eveniet.</p>
-                <a href="#" class="btn">Read More</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section class="portfolio" id="portfolio">
-        <h2 class="heading">Latest <span>Project</span></h2>
-
-        <div class="portfolio-container">
-            <div class="portfolio-box">
-                <img src="images/sports.png" alt="Project 1">
-                <div class="portfolio-layer">
-                    <h4>Web Design</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
-                </div>
-            </div>
-             <div class="portfolio-box">
-                <img src="images/portfolio2.jpg" alt="Project 2"> <!-- CHANGE IMAGE PATH -->
-                <div class="portfolio-layer">
-                    <h4>Development</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
-                </div>
-            </div>
-             <div class="portfolio-box">
-                <img src="images/portfolio3.jpg" alt="Project 3"> <!-- CHANGE IMAGE PATH -->
-                <div class="portfolio-layer">
-                    <h4>App UI</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
-                </div>
-            </div>
-             <div class="portfolio-box">
-                <img src="images/portfolio4.jpg" alt="Project 4"> <!-- CHANGE IMAGE PATH -->
-                <div class="portfolio-layer">
-                    <h4>Branding</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
-                </div>
-            </div>
-             <div class="portfolio-box">
-                <img src="images/portfolio5.jpg" alt="Project 5"> <!-- CHANGE IMAGE PATH -->
-                <div class="portfolio-layer">
-                    <h4>Marketing Site</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
-                </div>
-            </div>
-             <div class="portfolio-box">
-                <img src="images/portfolio6.jpg" alt="Project 6"> <!-- CHANGE IMAGE PATH -->
-                <div class="portfolio-layer">
-                    <h4>E-commerce</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
-                </div>
-            </div>
-            <!-- Add more portfolio boxes as needed -->
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me!</span></h2>
-
-        <!-- UPDATE THE ACTION AND ADD THE METHOD ATTRIBUTE -->
-        <form action="https://formspree.io/f/mvgqbeeq" method="POST">
-
-            <div class="input-box">
-                <!-- ADD NAME ATTRIBUTES -->
-                <input type="text" name="name" placeholder="Full Name" required>
-                <input type="email" name="email" placeholder="Email Address" required>
-            </div>
-            <div class="input-box">
-                <input type="tel" name="mobile" placeholder="Mobile Number">
-                <input type="text" name="subject" placeholder="Email Subject">
-            </div>
-
-            <!-- ADD A NAME ATTRIBUTE -->
-            <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
-
-            <input type="submit" value="Send Message" class="btn">
-        </form>
+    <section id="contact" class="bg-white py-24 px-6">
+        <div class="max-w-4xl mx-auto" id="contact-container"></div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-text">
-            <p>Copyright &copy; 2025 by Hian Gee | All Rights Reserved.</p> <!-- CHANGE THIS -->
-        </div>
-        <div class="footer-iconTop">
-            <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
-        </div>
+    <footer class="bg-slate-900 text-white py-16 px-6 text-center">
+        <div id="footer-content"></div>
     </footer>
 
-    <!-- Typed.js CDN (for typing animation) -->
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <!-- Custom JS -->
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>
