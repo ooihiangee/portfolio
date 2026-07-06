@@ -29,6 +29,12 @@ export const experience = [
         company: "Public Bank Berhad",
         period: "2023 - 2024",
         description: "• Collaborated with the vendor to develop machine learning model that complements traditional rule-based logic to uncover complex suspicious transaction patterns and hidden financial network which aims to improve the detection accuracy while significantly reducing false positives.\n• Developed a suite of efficient SAS Macro libraries that optimised the monthly data extraction pipelines and significantly reduced the turnaround time by 50% for increased productivity.\n• Identified and mitigated critical data gaps such as missing occupation info and duplicated ID by liaising across the business units to enhance the system logic and improve the reliability of the bankʼs core AML datasets.\n• Performed in-depth transaction and customer profile analysis to identify emerging red flags related to money laundering, terrorism financing and proliferation financing as part of due diligence effort.\n• Fulfilled customer demographic risk exposure surveys and prepared regulatory reporting figures for BNM.",
+    },
+    {
+        role: "Operational Risk - Intern",
+        company: "Malaysian Industrial Development Finance Berhad",
+        period: "2023 - 2024",
+        description: "• Developed an end-to-end MFRS9 PD modelling pipeline in R to automate macroeconomic variable selection, multi-scenario forecasting and forward-looking (PIT) calibration via non-linear scaling.\n•Automated the daily email reporting process using VBA to consolidate data from multiple sources into executive summaries which significantly reduced the manual workload and ensured timely delivery to senior management\n.•Reviewed and documented Key Risk Indicators of every department on a monthly basis.
     }
 ];
 
@@ -64,7 +70,7 @@ export const projects = [
 
 export const education = [
     { degree: "M.S. in Data Science", school: "University of Malaya", year: "2024 - 2025"},
-    { degree: "B.S. in Applied Mathemematics", school: "University of Malaya, Berkeley", year: "2019 - 2023" }
+    { degree: "B.S. in Applied Mathemematics", school: "University of Malaya", year: "2019 - 2023" }
 ];
 
 export const certifications = [
