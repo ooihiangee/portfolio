@@ -19,16 +19,16 @@ export const skills = [
 
 export const experience = [
     {
-        role: "Senior Data Scientist",
-        company: "TechCorp AI",
-        period: "2021 - Present",
-        description: "Led a team of 4 to develop a recommendation engine that increased user engagement by 25%. Optimized ETL pipelines reducing processing time by 40% using Apache Spark.",
+        role: "Credit Scoring and Model Governance - Senior Executive",
+        company: "Bank Simpanan Nasional (BSN)",
+        period: "2024 - Present",
+        description: "• Led the end-to-end migration of the Credit Scoring System from on-prem setup to hosted solution and managed the phases from procurement, liaison with vendors and PwC members, SIT, UAT to production deployment.\n• Collaborated with vendor to develop and implement Micro Financing Application and Alternative Scorecards integrating CCRIS, demographic and digital footprint data to expand credit access for thin-file segments.\n• Evaluated model health using indicators such as Gini and PSI, identified performance drift and provided recalibration recommendations to maintain predictive power and portfolio stability.\n• Developed a custom Streamlit parsing engine to process raw XML and JSON data which automated CCRIS, scoring variables and risk grades extraction, eliminated manual verification and reduced lead times.\n• Managed the full lifecycle deployment of A-score models and policy rules for new product launches or marketing campaigns in the Financing Origination System.\n• Created the new SOP document for the Credit Scoring System & Model Governance.\n• Dealt with working-level, middle management and top management for credit scoring and system matters.",
     },
     {
-        role: "Data Analyst",
-        company: "DataFin Solutions",
-        period: "2018 - 2021",
-        description: "Automated weekly financial reporting using Python, saving 20 manual hours per week. Performed churn analysis to improve customer retention by 15%.",
+        role: "AML/CFT Compliance FIU - Senior Executive",
+        company: "Public Bank Berhad",
+        period: "2023 - 2024",
+        description: "• Collaborated with the vendor to develop machine learning model that complements traditional rule-based logic to uncover complex suspicious transaction patterns and hidden financial network which aims to improve the detection accuracy while significantly reducing false positives.\n• Developed a suite of efficient SAS Macro libraries that optimised the monthly data extraction pipelines and significantly reduced the turnaround time by 50% for increased productivity.\n• Identified and mitigated critical data gaps such as missing occupation info and duplicated ID by liaising across the business units to enhance the system logic and improve the reliability of the bankʼs core AML datasets.\n• Performed in-depth transaction and customer profile analysis to identify emerging red flags related to money laundering, terrorism financing and proliferation financing as part of due diligence effort.\n• Fulfilled customer demographic risk exposure surveys and prepared regulatory reporting figures for BNM.",
     }
 ];
 
