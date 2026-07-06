@@ -10,7 +10,7 @@ function applyTheme(theme) {
     const toggleButton = document.getElementById('theme-toggle');
     if (toggleButton) {
         toggleButton.setAttribute('aria-pressed', String(theme === 'dark'));
-        const icon = toggleButton.querySelector('i');
+        const icon = toggleButton.querySelector('[data-lucide]');
         const label = toggleButton.querySelector('span');
 
         if (icon) {
@@ -113,6 +113,10 @@ function renderHero() {
             </a>
         </div>
     `;
+
+    if (window.lucide && typeof window.lucide.createIcons === 'function') {
+        window.lucide.createIcons();
+    }
 }
 
 function renderSkills() {
@@ -132,10 +136,10 @@ function formatDescription(desc) {
     const lines = desc.split(/\r?\n/).map(s => s.trim()).filter(Boolean);
     const isBulleted = lines.every(l => /^[-*•]\s+/.test(l));
     if (isBulleted) {
-        return `<ul class="list-disc ml-6 space-y-2">${lines.map(l => `<li class="text-slate-600 max-w-3xl leading-relaxed">${l.replace(/^[-*•]\s+/, '')}</li>`).join('')}</ul>`;
+        return `<ul class="list-disc ml-6 space-y-2">${lines.map(l => `<li class="text-slate-600 leading-relaxed">${l.replace(/^[-*•]\s+/, '')}</li>`).join('')}</ul>`;
     }
     // fallback: preserve line breaks as separate paragraphs
-    return lines.map(l => `<p class="text-slate-600 max-w-3xl leading-relaxed mb-2">${l}</p>`).join('');
+    return lines.map(l => `<p class="text-slate-600 leading-relaxed mb-2">${l}</p>`).join('');
 }
 
 function renderExperience() {
