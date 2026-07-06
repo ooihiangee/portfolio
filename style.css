@@ -4,10 +4,17 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
 }
 
 body {
     transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+section,
+header,
+footer {
+    scroll-margin-top: 5rem;
 }
 
 .hidden {
