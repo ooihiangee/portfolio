@@ -286,6 +286,57 @@ body.dark .social-icon {
     transform: scale(1.05);
 }
 
+/* Project filter buttons */
+.filter-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.45rem 0.8rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(148,163,184,0.18);
+    background: transparent;
+    color: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.18s ease;
+}
+
+.filter-btn:hover {
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background: #2563eb;
+    color: white;
+    border-color: rgba(37,99,235,0.9);
+}
+
+/* Load more button */
+.load-more-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem 1.25rem;
+    border-radius: 9999px;
+    background: #2563eb;
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 18px -8px rgba(37,99,235,0.6);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.load-more-btn:hover {
+    transform: translateY(-2px);
+}
+
+.load-more-secondary {
+    background: transparent;
+    color: inherit;
+    border: 1px solid rgba(148,163,184,0.12);
+}
+
 body.dark .text-slate-900 {
     color: #f8fafc !important;
 }

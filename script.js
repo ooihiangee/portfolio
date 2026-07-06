@@ -47,6 +47,39 @@ function initLucideIcons() {
     }
 }
 
+/* Project filter state and helpers */
+let selectedProjectTag = 'All';
+
+// Load more / pagination state
+const PROJECTS_PER_ROW = 3; // matches lg:grid-cols-3
+const PROJECT_ROWS_VISIBLE = 2; // show two rows initially
+const INITIAL_PROJECT_LIMIT = PROJECTS_PER_ROW * PROJECT_ROWS_VISIBLE; // 6
+let showAllProjects = false;
+
+function getUniqueProjectTags() {
+    const set = new Set();
+    (data.projects || []).forEach(p => {
+        (p.tags || []).forEach(t => set.add(t));
+    });
+    return Array.from(set).sort();
+}
+
+function renderProjectFilters() {
+    const container = document.getElementById('projects-filters');
+    if (!container) return;
+    const tags = ['All', ...getUniqueProjectTags()];
+    container.innerHTML = tags.map(tag => `
+        <button type="button" data-tag="${tag}" class="filter-btn ${tag === selectedProjectTag ? 'active' : ''}">${tag}</button>
+    `).join('');
+
+    const buttons = Array.from(container.querySelectorAll('button[data-tag]'));
+    buttons.forEach(btn => btn.addEventListener('click', () => {
+        selectedProjectTag = btn.getAttribute('data-tag');
+        buttons.forEach(b => b.classList.toggle('active', b.getAttribute('data-tag') === selectedProjectTag));
+        renderProjects();
+    }));
+}
+
 function initializeAccessGate() {
     const gate = document.getElementById('access-gate');
     const content = document.getElementById('portfolio-content');
@@ -90,6 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderHero();
     renderSkills();
     renderExperience();
+    renderProjectFilters();
     renderProjects();
     renderEducation();
     renderCerts();
@@ -166,7 +200,14 @@ function renderExperience() {
 
 function renderProjects() {
     const container = document.getElementById('projects-grid');
-    container.innerHTML = data.projects.map(proj => `
+    if (!container) return;
+
+    const projectsToShow = (selectedProjectTag && selectedProjectTag !== 'All')
+        ? data.projects.filter(p => (p.tags || []).includes(selectedProjectTag))
+        : data.projects;
+    const items = showAllProjects ? projectsToShow : projectsToShow.slice(0, INITIAL_PROJECT_LIMIT);
+
+    container.innerHTML = items.map(proj => `
         <div class="bg-white rounded-2xl overflow-hidden border border-slate-100 project-card flex flex-col h-full">
             <div class="h-40 w-full overflow-hidden bg-slate-100">
                 <img src="${proj.thumbnail || 'images/profile.jpg'}" alt="${proj.title} thumbnail" class="object-cover w-full h-full">
@@ -176,7 +217,7 @@ function renderProjects() {
                 <h3 class="text-xl font-bold mt-2 mb-3">${proj.title}</h3>
                 <p class="text-slate-600 text-sm mb-6 flex-grow">${proj.description}</p>
                 <div class="flex flex-wrap gap-2 mb-4">
-                    ${proj.tags.map(tag => `<span class="text-[10px] font-bold bg-blue-50 text-blue-700 px-2 py-1 rounded-md uppercase">${tag}</span>`).join('')}
+                    ${(proj.tags || []).map(tag => `<span class="text-[10px] font-bold bg-blue-50 text-blue-700 px-2 py-1 rounded-md uppercase">${tag}</span>`).join('')}
                 </div>
                 <div class="flex gap-6 border-t pt-4 mt-auto">
                     <a href="${proj.github}" class="flex items-center gap-2 text-sm font-bold text-slate-800 hover:text-blue-600 transition-colors">
@@ -189,6 +230,43 @@ function renderProjects() {
             </div>
         </div>
     `).join('');
+
+    if (window.lucide && typeof window.lucide.createIcons === 'function') {
+        window.lucide.createIcons();
+    }
+
+    renderProjectsLoadMore(projectsToShow.length);
+}
+
+function renderProjectsLoadMore(totalCount) {
+    const container = document.getElementById('projects-loadmore');
+    if (!container) return;
+
+    // If totalCount is less than or equal to initial limit, no load more needed
+    if (totalCount <= INITIAL_PROJECT_LIMIT) {
+        container.innerHTML = '';
+        return;
+    }
+
+    if (showAllProjects) {
+        container.innerHTML = `<button type="button" id="projects-collapse" class="load-more-btn load-more-secondary">Show less</button>`;
+        const btn = document.getElementById('projects-collapse');
+        btn?.addEventListener('click', () => {
+            showAllProjects = false;
+            renderProjects();
+            window.scrollTo({ top: document.getElementById('projects').offsetTop - 80, behavior: 'smooth' });
+        });
+    } else {
+        container.innerHTML = `<button type="button" id="projects-load-more" class="load-more-btn">Load more</button>`;
+        const btn = document.getElementById('projects-load-more');
+        btn?.addEventListener('click', () => {
+            showAllProjects = true;
+            renderProjects();
+            // scroll to newly revealed content
+            const grid = document.getElementById('projects-grid');
+            if (grid) grid.querySelector('.project-card:last-child')?.scrollIntoView({ behavior: 'smooth' });
+        });
+    }
 }
 
 function renderEducation() {

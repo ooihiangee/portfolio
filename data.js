@@ -1,7 +1,7 @@
 export const bioData = {
     name: "Hian Gee",
     title: "Scorecard Modeller | Data Scientist | Machine Learning Engineer",
-    summary: "Detail-oriented Credit Risk professional with strong foundations in statistics, machine learning and workflow automation. Experienced in developing and validating credit scoring models as well as translating complex data into actionable insights for risk strategy and governance. Proficient in SAS, SQL, Python and R with a proven ability to work across teams and lead data-driven initiatives",
+    summary: "Detail-oriented Credit Risk professional with strong foundations in statistics, machine learning and workflow automation. Experienced in developing and validating credit scoring models as well as translating complex data into actionable insights for risk strategy and governance. Proficient in SAS, SQL, Python and R with a proven ability to work across teams and lead data-driven initiatives.",
     email: "ooihiangee@gmail.com",
     resume: "assets/VETECE.pdf",
     socials: {
@@ -33,18 +33,18 @@ export const experience = [
     {
         role: "Operational Risk - Intern",
         company: "Malaysian Industrial Development Finance Berhad",
-        period: "2023 - 2024",
+        period: "2023 - 2023",
         description: "• Developed an end-to-end MFRS9 PD modelling pipeline in R to automate macroeconomic variable selection, multi-scenario forecasting and forward-looking (PIT) calibration via non-linear scaling.\n• Automated the daily email reporting process using VBA to consolidate data from multiple sources into executive summaries which significantly reduced the manual workload and ensured timely delivery to senior management.\n• Reviewed and documented Key Risk Indicators of every department on a monthly basis."
     }
 ];
 
 export const projects = [
     {
-        title: "Real-time Sentiment Analysis",
-        category: "NLP",
-        description: "A streaming dashboard that analyzes sentiment of live Twitter feeds using BERT models and Kafka.",
+        title: "CSS & CCRIS Streamlit Engine",
+        category: "Automation",
+        description: "A streaming dashboard that ingests raw data of scoring models and CCRIS information to produce insights.",
         thumbnail: "images/sports.png",
-        tags: ["Python", "PyTorch", "Kafka"],
+        tags: ["Python", "Streamlit", "JSON", "XML"],
         github: "#",
         demo: "#"
     },
@@ -59,6 +59,42 @@ export const projects = [
     },
     {
         title: "Supply Chain Optimizer",
+        category: "Optimization",
+        description: "Operations research project to minimize logistics costs using Linear Programming.",
+        thumbnail: "images/excel.png",
+        tags: ["PuLP", "NetworkX", "Matplotlib"],
+        github: "#",
+        demo: "#"
+    },
+    {
+        title: "Supply Chain Optimizer 2",
+        category: "Optimization",
+        description: "Operations research project to minimize logistics costs using Linear Programming.",
+        thumbnail: "images/excel.png",
+        tags: ["PuLP", "NetworkX", "Matplotlib"],
+        github: "#",
+        demo: "#"
+    },
+    {
+        title: "Supply Chain Optimizer 3",
+        category: "Optimization",
+        description: "Operations research project to minimize logistics costs using Linear Programming.",
+        thumbnail: "images/excel.png",
+        tags: ["PuLP", "NetworkX", "Matplotlib"],
+        github: "#",
+        demo: "#"
+    },
+    {
+        title: "Supply Chain Optimizer 4",
+        category: "Optimization",
+        description: "Operations research project to minimize logistics costs using Linear Programming.",
+        thumbnail: "images/excel.png",
+        tags: ["PuLP", "NetworkX", "Matplotlib"],
+        github: "#",
+        demo: "#"
+    },
+    {
+        title: "Supply Chain Optimizer 5",
         category: "Optimization",
         description: "Operations research project to minimize logistics costs using Linear Programming.",
         thumbnail: "images/excel.png",
