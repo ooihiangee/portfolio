@@ -22,7 +22,9 @@ function applyTheme(theme) {
         }
     }
 
-    lucide.createIcons();
+    if (window.lucide && typeof window.lucide.createIcons === 'function') {
+        window.lucide.createIcons();
+    }
 }
 
 function initializeTheme() {
