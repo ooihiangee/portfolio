@@ -127,6 +127,17 @@ function renderSkills() {
     `).join('');
 }
 
+function formatDescription(desc) {
+    if (!desc) return '';
+    const lines = desc.split(/\r?\n/).map(s => s.trim()).filter(Boolean);
+    const isBulleted = lines.every(l => /^[-*•]\s+/.test(l));
+    if (isBulleted) {
+        return `<ul class="list-disc ml-6 space-y-2">${lines.map(l => `<li class="text-slate-600 max-w-3xl leading-relaxed">${l.replace(/^[-*•]\s+/, '')}</li>`).join('')}</ul>`;
+    }
+    // fallback: preserve line breaks as separate paragraphs
+    return lines.map(l => `<p class="text-slate-600 max-w-3xl leading-relaxed mb-2">${l}</p>`).join('');
+}
+
 function renderExperience() {
     const container = document.getElementById('experience-timeline');
     container.innerHTML = data.experience.map(exp => `
@@ -134,7 +145,7 @@ function renderExperience() {
             <span class="text-sm font-bold text-blue-600 uppercase tracking-widest">${exp.period}</span>
             <h3 class="text-xl font-bold mt-1">${exp.role}</h3>
             <p class="text-slate-500 font-semibold mb-3">${exp.company}</p>
-            <p class="text-slate-600 max-w-3xl leading-relaxed">${exp.description}</p>
+            ${formatDescription(exp.description)}
         </div>
     `).join('');
 }
@@ -143,14 +154,17 @@ function renderProjects() {
     const container = document.getElementById('projects-grid');
     container.innerHTML = data.projects.map(proj => `
         <div class="bg-white rounded-2xl overflow-hidden border border-slate-100 project-card flex flex-col h-full">
-            <div class="p-8">
+            <div class="h-40 w-full overflow-hidden bg-slate-100">
+                <img src="${proj.thumbnail || 'images/profile.jpg'}" alt="${proj.title} thumbnail" class="object-cover w-full h-full">
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
                 <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">${proj.category}</span>
                 <h3 class="text-xl font-bold mt-2 mb-3">${proj.title}</h3>
                 <p class="text-slate-600 text-sm mb-6 flex-grow">${proj.description}</p>
-                <div class="flex flex-wrap gap-2 mb-8">
+                <div class="flex flex-wrap gap-2 mb-4">
                     ${proj.tags.map(tag => `<span class="text-[10px] font-bold bg-blue-50 text-blue-700 px-2 py-1 rounded-md uppercase">${tag}</span>`).join('')}
                 </div>
-                <div class="flex gap-6 border-t pt-6">
+                <div class="flex gap-6 border-t pt-4 mt-auto">
                     <a href="${proj.github}" class="flex items-center gap-2 text-sm font-bold text-slate-800 hover:text-blue-600 transition-colors">
                         <i data-lucide="github" class="w-4 h-4"></i> Code
                     </a>

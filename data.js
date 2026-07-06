@@ -37,6 +37,7 @@ export const projects = [
         title: "Real-time Sentiment Analysis",
         category: "NLP",
         description: "A streaming dashboard that analyzes sentiment of live Twitter feeds using BERT models and Kafka.",
+        thumbnail: "images/sports.png",
         tags: ["Python", "PyTorch", "Kafka"],
         github: "#",
         demo: "#"
@@ -45,6 +46,7 @@ export const projects = [
         title: "Customer LTV Predictor",
         category: "Machine Learning",
         description: "Predictive model to estimate Life Time Value of customers using Gradient Boosting Regressors.",
+        thumbnail: "images/skateboard.png",
         tags: ["Scikit-Learn", "Pandas", "Flask"],
         github: "#",
         demo: "#"
@@ -53,6 +55,7 @@ export const projects = [
         title: "Supply Chain Optimizer",
         category: "Optimization",
         description: "Operations research project to minimize logistics costs using Linear Programming.",
+        thumbnail: "images/excel.png",
         tags: ["PuLP", "NetworkX", "Matplotlib"],
         github: "#",
         demo: "#"
@@ -60,14 +63,16 @@ export const projects = [
 ];
 
 export const education = [
-    { degree: "M.S. in Data Science", school: "Stanford University", year: "2018" },
-    { degree: "B.S. in Statistics", school: "University of California, Berkeley", year: "2016" }
+    { degree: "M.S. in Data Science", school: "University of Malaya", year: "2024 - 2025"},
+    { degree: "B.S. in Applied Mathemematics", school: "University of Malaya, Berkeley", year: "2019 - 2023" }
 ];
 
 export const certifications = [
-    "AWS Certified Machine Learning – Specialty",
-    "Google Professional Data Engineer",
-    "DeepLearning.AI TensorFlow Developer"
+    "Certificate in Financial Services (CFS)",
+    "Google Data Analytics Professional Certificate",
+    "Excel Skills for Business Specialization",
+    "Python for Everybody Specialization",
+    "MIDF Award for Mathematics Excellence"
 ];
 
 export const contactConfig = {
