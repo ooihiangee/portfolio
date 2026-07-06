@@ -4,7 +4,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 4rem;
+    scroll-padding-top: 3rem;
 }
 
 body {
@@ -14,7 +14,7 @@ body {
 section,
 header,
 footer {
-    scroll-margin-top: 4rem;
+    scroll-margin-top: 3rem;
 }
 
 .hidden {
@@ -267,17 +267,17 @@ body.dark .text-slate-900 {
 }
 
 section {
-    padding-top: 3rem !important;
-    padding-bottom: 3rem !important;
-}
-
-header#hero {
     padding-top: 2rem !important;
     padding-bottom: 2rem !important;
 }
 
+header#hero {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+}
+
 section h2 {
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 1rem !important;
 }
 
 #experience-timeline {

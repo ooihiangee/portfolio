@@ -104,9 +104,15 @@ function renderHero() {
         <h2 class="text-2xl md:text-3xl text-blue-600 font-semibold mb-6">${data.bioData.title}</h2>
         <p class="text-lg text-slate-600 mb-8 max-w-2xl leading-relaxed">${data.bioData.summary}</p>
         <div class="flex flex-wrap items-center gap-4">
-            <a href="${data.bioData.socials.github}" target="_blank" rel="noopener noreferrer" aria-label="Visit GitHub" class="p-3 bg-slate-100 hover:bg-blue-600 hover:text-white rounded-full transition-all inline-flex items-center justify-center"><i data-lucide="github" class="w-5 h-5"></i></a>
-            <a href="${data.bioData.socials.linkedin}" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn" class="p-3 bg-slate-100 hover:bg-blue-600 hover:text-white rounded-full transition-all inline-flex items-center justify-center"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
-            <a href="mailto:${data.bioData.email}" aria-label="Send email" class="p-3 bg-slate-100 hover:bg-blue-600 hover:text-white rounded-full transition-all inline-flex items-center justify-center"><i data-lucide="mail" class="w-5 h-5"></i></a>
+            <a href="${data.bioData.socials.github}" target="_blank" rel="noopener noreferrer" aria-label="Visit GitHub" class="p-3 bg-slate-100 hover:bg-blue-600 hover:text-white rounded-full transition-all inline-flex items-center justify-center">
+                <img src="images/github.png" alt="GitHub" class="w-5 h-5">
+            </a>
+            <a href="${data.bioData.socials.linkedin}" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn" class="p-3 bg-slate-100 hover:bg-blue-600 hover:text-white rounded-full transition-all inline-flex items-center justify-center">
+                <img src="images/linkedin.png" alt="LinkedIn" class="w-5 h-5">
+            </a>
+            <a href="mailto:${data.bioData.email}" aria-label="Send email" class="p-3 bg-slate-100 hover:bg-blue-600 hover:text-white rounded-full transition-all inline-flex items-center justify-center">
+                <img src="images/email.png" alt="Email" class="w-5 h-5">
+            </a>
             <a href="${data.bioData.resume}" download class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-3 rounded-full shadow-lg shadow-blue-100 transition-all">
                 <i data-lucide="download" class="w-4 h-4"></i>
                 <span>Download Resume</span>
@@ -245,9 +251,15 @@ function renderFooter() {
     const year = new Date().getFullYear();
     container.innerHTML = `
         <div class="flex justify-center gap-8 mb-10">
-            <a href="${data.bioData.socials.github}" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors"><i data-lucide="github"></i></a>
-            <a href="${data.bioData.socials.linkedin}" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors"><i data-lucide="linkedin"></i></a>
-            <a href="mailto:${data.bioData.email}" class="text-slate-400 hover:text-white transition-colors"><i data-lucide="mail"></i></a>
+            <a href="${data.bioData.socials.github}" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors inline-flex items-center justify-center p-2 rounded-full bg-slate-800/10 hover:bg-blue-600">
+                <img src="assets/github.png" alt="GitHub" class="w-5 h-5">
+            </a>
+            <a href="${data.bioData.socials.linkedin}" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors inline-flex items-center justify-center p-2 rounded-full bg-slate-800/10 hover:bg-blue-600">
+                <img src="assets/linkedin.png" alt="LinkedIn" class="w-5 h-5">
+            </a>
+            <a href="mailto:${data.bioData.email}" class="text-slate-400 hover:text-white transition-colors inline-flex items-center justify-center p-2 rounded-full bg-slate-800/10 hover:bg-blue-600">
+                <img src="assets/email.png" alt="Email" class="w-5 h-5">
+            </a>
         </div>
         <p class="text-slate-500 font-medium">© ${year} ${data.bioData.name}. All rights reserved.</p>
     `;
