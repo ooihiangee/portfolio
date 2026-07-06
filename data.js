@@ -34,7 +34,7 @@ export const experience = [
         role: "Operational Risk - Intern",
         company: "Malaysian Industrial Development Finance Berhad",
         period: "2023 - 2024",
-        description: "• Developed an end-to-end MFRS9 PD modelling pipeline in R to automate macroeconomic variable selection, multi-scenario forecasting and forward-looking (PIT) calibration via non-linear scaling.\n•Automated the daily email reporting process using VBA to consolidate data from multiple sources into executive summaries which significantly reduced the manual workload and ensured timely delivery to senior management\n.•Reviewed and documented Key Risk Indicators of every department on a monthly basis.
+        description: "• Developed an end-to-end MFRS9 PD modelling pipeline in R to automate macroeconomic variable selection, multi-scenario forecasting and forward-looking (PIT) calibration via non-linear scaling.\n• Automated the daily email reporting process using VBA to consolidate data from multiple sources into executive summaries which significantly reduced the manual workload and ensured timely delivery to senior management.\n• Reviewed and documented Key Risk Indicators of every department on a monthly basis.",
     }
 ];
 
