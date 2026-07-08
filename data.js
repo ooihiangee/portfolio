@@ -14,7 +14,7 @@ export const skills = [
     { category: "Programming", items: ["Python", "R", "SQL", "C++"] },
     { category: "Machine Learning", items: ["Scikit-Learn", "PyTorch", "TensorFlow", "XGBoost"] },
     { category: "Data Tools", items: ["Pandas", "NumPy", "Apache Spark", "Tableau"] },
-    { category: "Cloud & DevOps", items: ["AWS", "Docker", "Git", "MLflow"] }
+    { category: "Software", items: ["PowerCurve Strategy Management (PCSM)", "CTOS CAD", "Git", "MLflow"] }
 ];
 
 export const experience = [
@@ -45,16 +45,16 @@ export const projects = [
         description: "A streaming dashboard that ingests raw data of scoring models and CCRIS information to produce insights.",
         thumbnail: "images/sports.png",
         tags: ["Python", "Streamlit", "JSON", "XML"],
-        github: "#",
+        github: "https://www.google.com",
         demo: "#"
     },
     {
-        title: "Customer LTV Predictor",
+        title: "USD/MYR Exchange Rate Predictor",
         category: "Machine Learning",
         description: "Predictive model to estimate Life Time Value of customers using Gradient Boosting Regressors.",
         thumbnail: "images/skateboard.png",
         tags: ["Scikit-Learn", "Pandas", "Flask"],
-        github: "#",
+        github: "https://usd-myr-modelling.streamlit.app/",
         demo: "#"
     },
     {

@@ -172,7 +172,7 @@ body.dark {
 
 .top-nav a:hover::after,
 .top-nav a:focus-visible::after {
-    width: 60%;
+    width: 70%;
 }
 
 .theme-toggle {
@@ -434,6 +434,10 @@ body.dark .text-blue-700 {
 }
 
 /* Project Card Hover Animation */
+#projects {
+    scroll-margin-top: 100px;
+}
+
 .project-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }

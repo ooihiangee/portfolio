@@ -151,7 +151,7 @@ function renderHero() {
             <a href="mailto:${data.bioData.email}" aria-label="Send email" class="social-icon-button bg-slate-100 hover:bg-blue-600 hover:text-white rounded-full transition-all inline-flex items-center justify-center">
                 <img src="images/email.png" alt="Email" class="social-icon">
             </a>
-            <a href="${data.bioData.resume}" download class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-3 rounded-full shadow-lg shadow-blue-100 transition-all">
+            <a href="${data.bioData.resume}" download class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-3 rounded-full transition-all">
                 <i data-lucide="download" class="w-4 h-4"></i>
                 <span>Download Resume</span>
             </a>
@@ -207,35 +207,54 @@ function renderProjects() {
         : data.projects;
     const items = showAllProjects ? projectsToShow : projectsToShow.slice(0, INITIAL_PROJECT_LIMIT);
 
-    container.innerHTML = items.map(proj => `
-        <div class="bg-white rounded-2xl overflow-hidden border border-slate-100 project-card flex flex-col h-full">
-            <div class="h-40 w-full overflow-hidden bg-slate-100">
-                <img src="${proj.thumbnail || 'images/profile.jpg'}" alt="${proj.title} thumbnail" class="object-cover w-full h-full">
+    container.innerHTML = items.map(proj => {
+        const primaryLink = (proj.demo && proj.demo !== '#') ? proj.demo : (proj.github && proj.github !== '#' ? proj.github : '#');
+        return `
+            <div class="bg-white rounded-2xl overflow-hidden border border-slate-100 project-card flex flex-col h-full">
+                <a href="${primaryLink}" target="_blank" rel="noopener noreferrer" class="flex flex-col flex-grow group">
+                    <div class="h-40 w-full overflow-hidden bg-slate-100">
+                        <img src="${proj.thumbnail || 'images/profile.jpg'}" alt="${proj.title} thumbnail" class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">${proj.category}</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">${proj.title}</h3>
+                        <p class="text-slate-600 text-sm mb-6 flex-grow">${proj.description}</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            ${(proj.tags || []).map(tag => `<span class="text-[10px] font-bold bg-blue-50 text-blue-700 px-2 py-1 rounded-md uppercase">${tag}</span>`).join('')}
+                        </div>
+                    </div>
+                </a>
             </div>
-            <div class="p-6 flex flex-col flex-grow">
-                <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">${proj.category}</span>
-                <h3 class="text-xl font-bold mt-2 mb-3">${proj.title}</h3>
-                <p class="text-slate-600 text-sm mb-6 flex-grow">${proj.description}</p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                    ${(proj.tags || []).map(tag => `<span class="text-[10px] font-bold bg-blue-50 text-blue-700 px-2 py-1 rounded-md uppercase">${tag}</span>`).join('')}
-                </div>
-                <div class="flex gap-6 border-t pt-4 mt-auto">
-                    <a href="${proj.github}" class="flex items-center gap-2 text-sm font-bold text-slate-800 hover:text-blue-600 transition-colors">
-                        <i data-lucide="github" class="w-4 h-4"></i> Code
-                    </a>
-                    <a href="${proj.demo}" class="flex items-center gap-2 text-sm font-bold text-slate-800 hover:text-blue-600 transition-colors">
-                        <i data-lucide="external-link" class="w-4 h-4"></i> Demo
-                    </a>
-                </div>
-            </div>
-        </div>
-    `).join('');
+        `;
+    }).join('');
 
     if (window.lucide && typeof window.lucide.createIcons === 'function') {
         window.lucide.createIcons();
     }
 
     renderProjectsLoadMore(projectsToShow.length);
+}
+
+function scrollToProjectsSection(focusLatestCard = false) {
+    const projectsSection = document.getElementById('projects');
+    if (!projectsSection) return;
+
+    const performScroll = () => {
+        if (focusLatestCard) {
+            const grid = document.getElementById('projects-grid');
+            const lastCard = grid?.querySelector('.project-card:last-child');
+            if (lastCard) {
+                lastCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                return;
+            }
+        }
+
+        projectsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+    requestAnimationFrame(() => {
+        requestAnimationFrame(performScroll);
+    });
 }
 
 function renderProjectsLoadMore(totalCount) {
@@ -254,7 +273,7 @@ function renderProjectsLoadMore(totalCount) {
         btn?.addEventListener('click', () => {
             showAllProjects = false;
             renderProjects();
-            window.scrollTo({ top: document.getElementById('projects').offsetTop - 80, behavior: 'smooth' });
+            scrollToProjectsSection();
         });
     } else {
         container.innerHTML = `<button type="button" id="projects-load-more" class="load-more-btn">Load more</button>`;
@@ -262,9 +281,7 @@ function renderProjectsLoadMore(totalCount) {
         btn?.addEventListener('click', () => {
             showAllProjects = true;
             renderProjects();
-            // scroll to newly revealed content
-            const grid = document.getElementById('projects-grid');
-            if (grid) grid.querySelector('.project-card:last-child')?.scrollIntoView({ behavior: 'smooth' });
+            scrollToProjectsSection(true);
         });
     }
 }
@@ -318,7 +335,7 @@ function renderContact() {
                 class="w-full p-4 bg-white border border-slate-200 rounded-xl focus:outline-none focus:border-blue-600 transition-all"></textarea>
             <div class="text-center">
                 <button type="submit" 
-                    class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-12 rounded-full transition-all transform hover:scale-105 shadow-xl shadow-blue-100">
+                    class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-12 rounded-full transition-all transform hover:scale-105">
                     Send Message
                 </button>
             </div>
